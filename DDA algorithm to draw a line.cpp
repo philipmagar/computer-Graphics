@@ -5,7 +5,7 @@ void main()
 {  
     intgd = DETECT ,gm, j;  
     float x, y,dx,dy,steps;  
-    int x0, x1, y0, y1;  
+    int x1, x2, y1, y2;  
     initgraph(&gd, &gm, "");  
     setbkcolor(WHITE);
     printf("Enter the value of x1 and y1 : ");
@@ -13,8 +13,8 @@ void main()
 	printf("Enter the value of x2 and y2: ");
 	scanf("%f%f",&x2,&y2);
 
-    dx = (float)(x1 - x0);  
-    dy = (float)(y1 - y0);  
+    dx = (float)(x2 - x1);  
+    dy = (float)(y2 - y1);  
     if(dx>=dy)  
            {  
         steps = dx;  
@@ -25,8 +25,8 @@ void main()
     }  
     dx = dx/steps;  
     dy = dy/steps;  
-    x = x0;  
-    y = y0;  
+    x = x1;  
+    y = y1;  
     j = 1;  
     while(j<= steps)  
     {  
